@@ -3,6 +3,7 @@ package jwtmiddleware
 import (
 	"context"
 	"errors"
+	"github.com/otee-as/go-jwt-middleware/validator"
 	"io"
 	"net/http"
 	"net/http/httptest"
@@ -11,8 +12,6 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-
-	"github.com/auth0/go-jwt-middleware/v2/validator"
 )
 
 func Test_CheckJWT(t *testing.T) {
