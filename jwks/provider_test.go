@@ -7,6 +7,7 @@ import (
 	"crypto/x509"
 	"encoding/json"
 	"fmt"
+	"github.com/go-jose/go-jose/v4"
 	"math/big"
 	"net/http"
 	"net/http/httptest"
@@ -20,9 +21,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"gopkg.in/go-jose/go-jose.v2"
 
-	"github.com/auth0/go-jwt-middleware/v2/internal/oidc"
+	"github.com/otee-as/go-jwt-middleware/internal/oidc"
 )
 
 func Test_JWKSProvider(t *testing.T) {
