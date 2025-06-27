@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/otee-as/go-jwt-middleware/internal/oidc"
 	"net/http"
 	"net/url"
 	"sync"
@@ -11,8 +12,6 @@ import (
 
 	"github.com/go-jose/go-jose/v4"
 	"golang.org/x/sync/semaphore"
-
-	"github.com/auth0/go-jwt-middleware/v2/internal/oidc"
 )
 
 // Provider handles getting JWKS from the specified IssuerURL and exposes
